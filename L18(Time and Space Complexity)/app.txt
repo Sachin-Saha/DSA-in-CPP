@@ -1,0 +1,90 @@
+1. Time Complexity:
+Time complexity measures the amount of time a function takes to run, as a function of the size of its input. It describes how the runtime of an algorithm grows as the input size increases.
+
+Common time complexities:
+
+O(1): Constant time - no matter the size of the input, it always takes the same amount of time.
+O(n): Linear time - time grows proportionally to the input size.
+O(log n): Logarithmic time - time grows logarithmically with the input size.
+O(n²): Quadratic time - time grows proportionally to the square of the input size.
+
+
+Example: 
+
+function printFirstElement(arr) {
+    console.log(arr[0]);
+}
+
+In this example, no matter how large the array is, the function only accesses the first element, so the time complexity is O(1) (constant time).
+
+
+---------------------------------------------------- Space Complexity --------------------------------------------------------------
+
+2. Space Complexity:
+Space complexity refers to the amount of memory (space) an algorithm needs relative to the size of the input. It measures how memory usage grows with the input size.
+
+Common space complexities:
+
+O(1): Constant space - the amount of memory doesn't change as input size grows.
+O(n): Linear space - memory grows linearly with the input size.
+Example:
+
+
+function createArray(n) {
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr.push(i);
+    }
+    return arr;
+}
+
+In this case, the space complexity is O(n) because the size of the array arr grows with n.
+
+------------------------------------------------- Steps for Calculating Both complexity ----------------------------------------------
+
+Steps for Calculating Time and Space Complexity
+Step 1: Understand the Code
+Read the code carefully and identify how many operations are being performed. Check if operations depend on the size of the input (n).
+Step 2: Analyze Time Complexity
+Constant Time: Any operation that doesn't depend on the input size (e.g., accessing an array element, assigning a value) is O(1).
+Loops: If a loop runs n times, the time complexity is usually O(n). Nested loops multiply their complexities (e.g., two nested loops running n times each will have time complexity O(n²)).
+Example: (Time Complexity Calculation)
+
+
+
+function sumArray(arr) {
+    let sum = 0; // O(1)
+    for (let i = 0; i < arr.length; i++) { // O(n)
+        sum += arr[i]; // O(1)
+    }
+    return sum; // O(1)
+}
+
+
+The loop runs n times (where n is arr.length), and each iteration is a constant operation, so the overall time complexity is O(n).
+Step 3: Analyze Space Complexity
+Variables: Each primitive variable (number, string, boolean, etc.) takes constant space O(1).
+Arrays/Objects: Memory usage increases with input size. If an array/object grows with n, the space complexity is O(n).
+
+Example: (Space Complexity Calculation)
+
+
+function duplicateArray(arr) {
+    let newArray = []; // O(1)
+    for (let i = 0; i < arr.length; i++) { // O(n)
+        newArray.push(arr[i]); // O(1)
+    }
+    return newArray; // O(1)
+}
+
+
+A new array newArray of size n is created, so the space complexity is O(n).
+Step 4: Combine and Simplify
+Combine the individual time/space complexities of the different parts of the code.
+Discard constants and lower-order terms to get the final complexity.
+For the sumArray example:
+
+Time complexity: O(n)
+Space complexity: O(1)
+
+
