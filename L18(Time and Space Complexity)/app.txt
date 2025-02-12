@@ -8,7 +8,6 @@ O(n): Linear time - time grows proportionally to the input size.
 O(log n): Logarithmic time - time grows logarithmically with the input size.
 O(n²): Quadratic time - time grows proportionally to the square of the input size.
 
-
 Example: 
 
 function printFirstElement(arr) {
