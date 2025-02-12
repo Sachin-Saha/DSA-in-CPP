@@ -16,7 +16,7 @@ function printFirstElement(arr) {
 
 In this example, no matter how large the array is, the function only accesses the first element, so the time complexity is O(1) (constant time).
 
-
+  
 ---------------------------------------------------- Space Complexity --------------------------------------------------------------
 
 2. Space Complexity:
